@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upravljanje Klimama</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="centered-title">
+        <h1>Upravljanje Klimama</h1>
+    </div>
+
+    <div class="navigation">
+        <div class="menu">
+            <a href="UpravljanjeMarkama.html" class="btn">Upravljanje Markama</a>
+            <a href="ER_diagram.png" class="btn" target="_blank">ER Dijagram</a>
+            <a href="https://github.com/NATEJ1707/Zavrsni_rad" class="btn" target="_blank">GitHub Repozitorij</a>
+        </div>
+    </div>
+
+    <form id="klimaForm">
+        <input type="hidden" id="klimaId" />
+        <div class="form-group">
+            <label for="model">Model:</label>
+            <input type="text" id="model" name="model" required>
+        </div>
+        <div class="form-group">
+            <label for="cijena">Cijena (€):</label>
+            <input type="number" id="cijena" name="cijena" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="garancija">Garancija (godina):</label>
+            <input type="number" id="garancija" name="garancija" required>
+        </div>
+        <div class="form-group">
+            <label for="energetskiUcinkovita">Energetski Učinkovita:</label>
+            <input type="checkbox" id="energetskiUcinkovita" name="energetskiUcinkovita">
+        </div>
+        <div class="form-group">
+            <label for="marka">Marka:</label>
+            <select id="marka" name="marka" required>
+            </select>
+        </div>
+        <button type="submit" class="btn">Spremi Klimu</button>
+    </form>
+
+    <div>
+        <h2>Lista Klimama</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Model</th>
+                    <th>Cijena (€)</th>
+                    <th>Garancija (g)</th>
+                    <th>E.U.</th>
+                    <th>Marka</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody id="klimeTableBody">
+                <!-- Klime će biti dinamički dodane ovdje -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upravljanje Markama</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="centered-title">
+        <h1>Upravljanje Markama</h1>
+    </div>
+
+    <div class="navigation">
+        <div class="menu">
+            <a href="index.html" class="btn">Upravljanje Klimama</a>
+            <a href="ER_diagram.png" class="btn" target="_blank">ER Dijagram</a>
+            <a href="https://github.com/matejsudo/CSHARP_API_TalentAgencija.com/" class="btn" target="_blank">GitHub Repozitorij</a>
+        </div>
+    </div>
+
+    <form id="markaForm">
+        <input type="hidden" id="markaId" />
+        <div class="form-group">
+            <label for="name">Naziv Marke:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <button type="submit" class="btn">Spremi Marku</button>
+    </form>
+
+    <div>
+        <h2>Lista Marki</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Naziv</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody id="markeTableBody">
+                <!-- Marke će biti dinamički dodane ovdje -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@KlimeApp_HostAddress = http://localhost:5296
+
+GET {{KlimeApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

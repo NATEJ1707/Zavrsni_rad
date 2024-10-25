@@ -1,0 +1,184 @@
+﻿/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Crna pozadina */
+    color: #FFFFFF; /* Bijela slova */
+    margin: 0;
+    padding: 20px;
+}
+
+.centered-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    color: #FFFFFF; /* Bijela slova za naslove */
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF; /* Bijela slova za linkove */
+}
+
+/* Navigation Styles */
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+    .navigation .menu,
+    .navigation .links {
+        display: flex;
+        gap: 10px;
+        margin: 10px;
+    }
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFD700; /* Žuta boja gumba */
+    color: #000000; /* Crna slova na žutim gumbima */
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+    .btn:hover {
+        background-color: #FFC107; /* Tamnija žuta pri hoveru */
+    }
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    background: #1a1a1a; /* Tamna pozadina za formu */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(255, 215, 0, 0.5); /* Zlati sjeni */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #FFD700; /* Žuta obrub */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #333333; /* Tamna pozadina polja */
+    color: #FFFFFF; /* Bijeli tekst */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button[type="submit"],
+button {
+    padding: 10px 15px;
+    background-color: #FFD700; /* Žuta boja gumba */
+    border: none;
+    color: #000000; /* Crna slova */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button[type="submit"]:hover,
+    button:hover {
+        background-color: #FFC107; /* Tamnija žuta pri hoveru */
+    }
+
+    button.edit-btn {
+        background-color: #FFA500; /* Narančasta boja za edit */
+        color: #000000;
+    }
+
+        button.edit-btn:hover {
+            background-color: #FF8C00;
+        }
+
+    button.delete-btn {
+        background-color: #FF4500; /* Crvena boja za delete */
+        color: #FFFFFF;
+    }
+
+        button.delete-btn:hover {
+            background-color: #FF0000;
+        }
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #2c2c2c; /* Tamna pozadina za listu */
+    margin: 5px auto;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+    li span {
+        flex-grow: 1;
+    }
+
+    li button {
+        margin-left: 5px;
+    }
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .navigation {
+        flex-direction: column;
+    }
+
+        .navigation .menu,
+        .navigation .links {
+            flex-direction: column;
+            align-items: center;
+        }
+
+    .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    form {
+        width: 100%;
+        padding: 15px;
+    }
+
+    li {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+        li button {
+            margin-top: 5px;
+        }
+}
